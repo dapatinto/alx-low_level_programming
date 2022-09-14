@@ -1,7 +1,3 @@
-nclude <stdio.h>
-
-
-
 #include "main.h"
 
 
