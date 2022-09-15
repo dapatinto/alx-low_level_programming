@@ -1,38 +1,36 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints largest prime factor.
- * Return: Always 0.
+ * print_number - Prints an integer.
+ * @n: The integer to be printed.
  */
 
-int main(void)
+void print_number(int n)
 
 {
 
-	long int num, p;
+	unsigned int num = n;
 
 
 
-	num = 612852475143;
-
-	for (p = 2; p <= num; p++)
+	if (n < 0)
 
 	{
 
-		if (num % p == 0)
+		_putchar('-');
 
-		{
-
-			num = num / p;
-
-			p--;
-
-		}
+		num = -num;
 
 	}
 
-	printf("%ld\n", p);
+	if ((num / 10) > 0)
 
-	return (0);
+	{
+
+		print_number(num / 10);
+
+	}
+
+	_putchar((num % 10) + '0');
 
 }
